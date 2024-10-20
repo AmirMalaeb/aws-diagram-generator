@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AWS Architecture Diagram Generator
 
-## Getting Started
+## Description
+This project demonstrates how to create an AI-powered AWS architecture diagram generator using Next.js, React, and Amazon Bedrock with Claude 3.5 Sonnet. The application allows users to input a text description of their AWS architecture and generates a visual diagram along with best practice suggestions.
 
-First, run the development server:
+## 🌟 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- AI-powered diagram generation from text descriptions
+- Interactive diagram with zoom functionality
+- Multiple download formats (SVG, JPEG, PDF)
+- AWS best practices suggestions
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Frontend: React, Next.js, Tailwind CSS
+- Backend: Node.js (Next.js API routes)
+- AI: Claude 3.5 Sonnet via Amazon Bedrock
+- Diagram rendering: Mermaid.js
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🚀 Getting Started
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js (v14 or later)
+- npm (v6 or later)
+- An AWS account with access to Amazon Bedrock
+- Access to Claude 3.5 Sonnet model on Amazon Bedrock
+  - Ensure your AWS account has been granted access to the Claude 3.5 Sonnet model
+  - You may need to request access through the AWS console if you haven't already
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository:
+   ```
+   git clone https://github.com/AmirMalaeb/aws-diagram-generator.git
+   cd aws-diagram-generator
+   ```
 
-## Deploy on Vercel
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   This will install the following main dependencies:
+   - next
+   - react
+   - react-dom
+   - tailwindcss
+   - @radix-ui/react-slot
+   - lucide-react
+   - mermaid
+   - html2canvas
+   - jspdf
+   - @aws-sdk/client-bedrock-runtime
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   And dev dependencies:
+   - postcss
+   - autoprefixer
+
+3. Create a `.env.local` file in the root directory and add your AWS credentials:
+   ```
+   AWS_REGION=your_aws_region
+   AWS_ACCESS_KEY_ID=your_access_key
+   AWS_SECRET_ACCESS_KEY=your_secret_key
+   ```
+
+   Make sure these credentials have the necessary permissions to access Amazon Bedrock and the Claude 3.5 Sonnet model.
+
+4. (Optional) If you want to manually install or update specific dependencies, you can use:
+   ```
+   npm install next react react-dom tailwindcss @radix-ui/react-slot lucide-react mermaid html2canvas jspdf @aws-sdk/client-bedrock-runtime
+   npm install -D postcss autoprefixer
+   ```
+
+### Running the Application
+
+1. Start the development server:
+   ```
+   npm run dev
+   ```
+
+2. Open your browser and navigate to `http://localhost:3000`
+
+## 📖 How to Use
+
+1. Enter a description of your AWS architecture in the text area.
+2. Click the "Generate Diagram" button.
+3. View the generated diagram and best practices suggestions.
+4. Use the zoom controls to adjust the diagram view.
+5. Download the diagram in your preferred format (SVG, JPEG, or PDF).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/AmirMalaeb/aws-diagram-generator/issues).
+
+## 📝 License
+
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+
+## 🙏 Acknowledgements
+
+- [Amazon Web Services](https://aws.amazon.com/)
+- [Anthropic's Claude AI](https://www.anthropic.com/)
+- [Mermaid.js](https://mermaid-js.github.io/mermaid/#/)
